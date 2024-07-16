@@ -124,14 +124,14 @@ document.addEventListener('DOMContentLoaded', () => {
             score++;
         }
         Array.from(answersElement.children).forEach(button => {
-            setStatusClass(button, button.dataset.correct === 'true');
+            if (button !== selectedButton) {
+                button.style.display = 'none';
+            }
+            setStatusClass(selectedButton, correct);
         });
-        selectedButton.classList.add('selected');
-        if (currentQuestionIndex < questions.length - 1) {
-            nextButton.disabled = false;
-        } else {
+        nextButton.disabled = false;
+        if (currentQuestionIndex === questions.length - 1) {
             nextButton.innerText = 'Mostrar puntuación';
-            nextButton.disabled = false;
         }
     }
 
