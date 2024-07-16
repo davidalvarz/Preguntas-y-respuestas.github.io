@@ -17,7 +17,78 @@ const questions = [
             { text: "Neptuno", correct: false }
         ]
     },
-    // Agrega más preguntas según sea necesario
+    {
+        question: "¿En qué año llegó el hombre a la luna?",
+        answers: [
+            { text: "1965", correct: false },
+            { text: "1969", correct: true },
+            { text: "1971", correct: false },
+            { text: "1975", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el río más largo del mundo?",
+        answers: [
+            { text: "Amazonas", correct: true },
+            { text: "Nilo", correct: false },
+            { text: "Yangtsé", correct: false },
+            { text: "Misisipi", correct: false }
+        ]
+    },
+    {
+        question: "¿Quién pintó La Mona Lisa?",
+        answers: [
+            { text: "Vincent Van Gogh", correct: false },
+            { text: "Pablo Picasso", correct: false },
+            { text: "Leonardo da Vinci", correct: true },
+            { text: "Claude Monet", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el idioma más hablado en el mundo?",
+        answers: [
+            { text: "Inglés", correct: false },
+            { text: "Español", correct: false },
+            { text: "Chino mandarín", correct: true },
+            { text: "Hindú", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el animal terrestre más rápido?",
+        answers: [
+            { text: "León", correct: false },
+            { text: "Guepardo", correct: true },
+            { text: "Tigre", correct: false },
+            { text: "Antílope", correct: false }
+        ]
+    },
+    {
+        question: "¿Qué país tiene la mayor población del mundo?",
+        answers: [
+            { text: "Estados Unidos", correct: false },
+            { text: "India", correct: false },
+            { text: "China", correct: true },
+            { text: "Rusia", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el metal más abundante en la corteza terrestre?",
+        answers: [
+            { text: "Hierro", correct: false },
+            { text: "Aluminio", correct: true },
+            { text: "Cobre", correct: false },
+            { text: "Plata", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el libro más vendido del mundo?",
+        answers: [
+            { text: "El Quijote", correct: false },
+            { text: "La Biblia", correct: true },
+            { text: "Harry Potter", correct: false },
+            { text: "El Señor de los Anillos", correct: false }
+        ]
+    }
 ];
 
 let currentQuestionIndex = 0;
