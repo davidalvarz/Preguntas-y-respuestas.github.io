@@ -92,11 +92,15 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
+let score = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
     const questionElement = document.getElementById('question');
     const answersElement = document.getElementById('answers');
     const nextButton = document.getElementById('next-btn');
+    const scoreContainer = document.getElementById('score-container');
+    const scoreElement = document.getElementById('score');
+    const restartButton = document.getElementById('restart-btn');
 
     function showQuestion(question) {
         questionElement.innerText = question.question;
@@ -116,13 +120,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function selectAnswer(e) {
         const selectedButton = e.target;
         const correct = selectedButton.dataset.correct === 'true';
+        if (correct) {
+            score++;
+        }
         Array.from(answersElement.children).forEach(button => {
             setStatusClass(button, button.dataset.correct === 'true');
         });
+        selectedButton.classList.add('selected');
         if (currentQuestionIndex < questions.length - 1) {
             nextButton.disabled = false;
         } else {
-            nextButton.innerText = 'Reiniciar';
+            nextButton.innerText = 'Mostrar puntuación';
             nextButton.disabled = false;
         }
     }
@@ -139,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function clearStatusClass(element) {
         element.classList.remove('correct');
         element.classList.remove('wrong');
+        element.classList.remove('selected');
     }
 
     function showNextQuestion() {
@@ -147,17 +156,27 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentQuestionIndex < questions.length) {
             showQuestion(questions[currentQuestionIndex]);
         } else {
-            resetGame();
+            showScore();
         }
+    }
+
+    function showScore() {
+        scoreElement.innerText = `${score} de ${questions.length}`;
+        scoreContainer.style.display = 'block';
+        nextButton.style.display = 'none';
     }
 
     function resetGame() {
         currentQuestionIndex = 0;
+        score = 0;
+        scoreContainer.style.display = 'none';
+        nextButton.style.display = 'block';
         nextButton.innerText = 'Siguiente';
         showQuestion(questions[currentQuestionIndex]);
     }
 
     nextButton.addEventListener('click', showNextQuestion);
+    restartButton.addEventListener('click', resetGame);
 
     showQuestion(questions[currentQuestionIndex]);
 });
