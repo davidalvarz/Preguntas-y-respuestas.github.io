@@ -151,9 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function showNextQuestion() {
-        currentQuestionIndex++;
-        nextButton.disabled = true;
-        if (currentQuestionIndex < questions.length) {
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            nextButton.disabled = true;
             showQuestion(questions[currentQuestionIndex]);
         } else {
             showScore();
