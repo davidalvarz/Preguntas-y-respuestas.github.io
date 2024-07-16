@@ -5,15 +5,16 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f3f4f6;
+    background-color: #282c34;
+    color: #ffffff;
 }
 
 .container {
     text-align: center;
-    background: #ffffff;
+    background: #1c1e22;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     width: 80%;
     max-width: 600px;
 }
@@ -29,20 +30,38 @@ body {
 }
 
 .btn {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #61dafb;
+    color: #282c34;
     padding: 10px;
     margin: 5px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #21a1f1;
 }
 
 .btn:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
+}
+
+.correct {
+    background-color: #4caf50;
+}
+
+.wrong {
+    background-color: #f44336;
+}
+
+.selected {
+    background-color: #ff9800;
+}
+
+.score-container {
+    display: none;
+    margin-top: 20px;
 }
