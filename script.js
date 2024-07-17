@@ -88,6 +88,60 @@ const questions = [
             { text: "Harry Potter", correct: false },
             { text: "El Señor de los Anillos", correct: false }
         ]
+    },
+    {
+        question: "¿Qué gas es necesario para la respiración?",
+        answers: [
+            { text: "Dióxido de carbono", correct: false },
+            { text: "Oxígeno", correct: true },
+            { text: "Nitrógeno", correct: false },
+            { text: "Helio", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es la moneda oficial de Japón?",
+        answers: [
+            { text: "Yen", correct: true },
+            { text: "Won", correct: false },
+            { text: "Peso", correct: false },
+            { text: "Dólar", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el océano más grande del mundo?",
+        answers: [
+            { text: "Atlántico", correct: false },
+            { text: "Pacífico", correct: true },
+            { text: "Índico", correct: false },
+            { text: "Ártico", correct: false }
+        ]
+    },
+    {
+        question: "¿Quién escribió 'Cien años de soledad'?",
+        answers: [
+            { text: "Gabriel García Márquez", correct: true },
+            { text: "Mario Vargas Llosa", correct: false },
+            { text: "Julio Cortázar", correct: false },
+            { text: "Carlos Fuentes", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el símbolo químico del oro?",
+        answers: [
+            { text: "Ag", correct: false },
+            { text: "Au", correct: true },
+            { text: "Pb", correct: false },
+            { text: "Fe", correct: false }
+        ]
+    },
+    {
+        question: "¿Cuál es el país más grande del mundo?",
+        answers: [
+            { text: "Canadá", correct: false },
+            { text: "Estados Unidos", correct: false },
+            { text: "China", correct: false },
+            { text: "Rusia", correct: true }
+        ]
     }
 ];
 
