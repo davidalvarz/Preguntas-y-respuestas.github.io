@@ -1,78 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     margin: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #ffffff;
+    color: #333;
 }
 
-.container {
+#quiz-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 20px;
     text-align: center;
-    background: rgba(0, 0, 0, 0.8);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    width: 90%;
-    max-width: 600px;
 }
 
-.question {
-    font-size: 24px;
+#question {
+    font-size: 1.5em;
     margin-bottom: 20px;
-    border-bottom: 2px solid #61dafb;
-    padding-bottom: 10px;
 }
 
-.answers {
+#answers {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
 .btn {
-    background-color: #61dafb;
-    color: #282c34;
-    padding: 15px;
-    margin: 5px 0;
+    padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    font-size: 18px;
+    background: #007bff;
+    color: white;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .btn:hover {
-    background-color: #21a1f1;
+    background: #0056b3;
     transform: scale(1.05);
 }
 
-.btn:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
 .correct {
-    background-color: #4caf50;
+    background: #28a745 !important;
 }
 
 .wrong {
-    background-color: #f44336;
+    background: #dc3545 !important;
 }
 
-.selected {
-    background-color: #ff9800;
-}
-
-.score-container {
-    display: none;
+#next-btn, #restart-btn {
     margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s, transform 0.3s;
 }
 
-h2 {
-    margin: 0 0 20px 0;
+#next-btn:hover, #restart-btn:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+#score-container {
+    display: none;
+    font-size: 1.2em;
+    margin-top: 20px;
 }
