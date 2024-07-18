@@ -1,9 +1,23 @@
-<div id="quiz-container">
-    <div id="question"></div>
-    <div id="answers"></div>
-    <button id="next-btn" disabled>Siguiente</button>
-    <div id="score-container">
-        <div id="score"></div>
-        <button id="restart-btn">Reiniciar</button>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Preguntas y Respuestas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div id="game" class="game-container">
+            <div id="question" class="question"></div>
+            <div id="answers" class="answers"></div>
+        </div>
+        <button id="next-btn" class="btn">Siguiente</button>
+        <div id="score-container" class="score-container">
+            <h2>Tu puntuación: <span id="score"></span></h2>
+            <button id="restart-btn" class="btn">Reiniciar</button>
+        </div>
     </div>
-</div>
+    <script src="script.js"></script>
+</body>
+</html>
